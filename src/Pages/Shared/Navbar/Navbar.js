@@ -1,31 +1,34 @@
 import React from "react";
+import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const menuItems = (
-    <>
+    <Nav>
       <li>
-        <Link to="/">Home</Link>
+        <Nav.Link href="/">Home</Nav.Link>
       </li>
       <li>
-        <Link to="/Home#banner"> Banner</Link>
+        <Nav.Link href="/Home#banner"> Banner</Nav.Link>
       </li>
       <li>
-        <Link to="/tools">Tools</Link>
+        <Nav.Link href="/Home#tools">Tools</Nav.Link>
       </li>
       <li>
-        <Link to="/business_summary">Business Summary</Link>
+        <Nav.Link href="/Home#business_summary">Business Summary</Nav.Link>
       </li>
       <li>
-        <Link to="/reviews">Reviews</Link>
+        <Nav.Link href="/reviews">Reviews</Nav.Link>
       </li>
       <li>
-        <Link to="/about">About</Link>
+        <Nav.Link as={Link} to="/about">
+          About
+        </Nav.Link>
       </li>
       <li>
-        <Link to="/login">Login</Link>
+        <Nav.Link to="/login">Login</Nav.Link>
       </li>
-    </>
+    </Nav>
   );
   return (
     <div class="navbar bg-base-100">
