@@ -71,7 +71,7 @@ const Tools = () => {
     },
   ];
   return (
-    <div className="m-28">
+    <div className="">
       <div className="text-center ">
         <h3 className="text-primary text-2xl font-bold uppercase m-20">
           Our Tools

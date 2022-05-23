@@ -21,9 +21,7 @@ const Navbar = () => {
         <Nav.Link href="/reviews">Reviews</Nav.Link>
       </li>
       <li>
-        <Nav.Link as={Link} to="/about">
-          About
-        </Nav.Link>
+        <Nav.Link to="/about">About</Nav.Link>
       </li>
       <li>
         <Nav.Link to="/login">Login</Nav.Link>

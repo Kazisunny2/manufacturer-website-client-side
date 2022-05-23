@@ -5,7 +5,7 @@ import Tools from "../Tools/Tools";
 
 const Home = () => {
   return (
-    <div>
+    <div className="px-12">
       <Banner></Banner>
       <Tools></Tools>
       <BusinessSummaryS></BusinessSummaryS>

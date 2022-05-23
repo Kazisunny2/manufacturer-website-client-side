@@ -11,7 +11,7 @@ const Tool = ({ tool }) => {
           class="rounded-xl"
         />
       </figure>
-      <div class="card-body items-center text-center">
+      <div class="card-body text-center">
         <h2 class="card-title">{tool.name}</h2>
         <p className="card-text">Description: {tool.description}</p>
         <p> Minimum Order Quantity: {tool.minimum_order_quantity}</p>
