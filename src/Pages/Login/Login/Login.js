@@ -34,7 +34,7 @@ const Login = () => {
     );
   }
   if (user || gUser) {
-    console.log(user || gUser);
+    navigate(from, { replace: true });
   }
   const onSubmit = (data) => {
     console.log(data);

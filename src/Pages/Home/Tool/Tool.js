@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Tool = ({ tool }) => {
   return (
@@ -18,7 +19,9 @@ const Tool = ({ tool }) => {
         <p>Available Quantity: {tool.available_quantity}</p>
         <p>Price(Per Unit): ${tool.Price}</p>
         <div className="card-actions">
-          <button className="btn btn-primary">Buy Now</button>
+          <button className="btn btn-primary">
+            <NavLink to="/purchase">Purchase</NavLink>
+          </button>
         </div>
       </div>
     </div>
