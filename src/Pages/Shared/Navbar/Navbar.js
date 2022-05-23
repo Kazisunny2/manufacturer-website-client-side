@@ -1,72 +1,67 @@
-import { signOut } from "firebase/auth";
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
-import { useAuthState } from "react-firebase-hooks/auth";
+import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import auth from "../../../firebase.init";
 
-const Header = () => {
-  const [user] = useAuthState(auth);
-
-  const handleSignOut = () => {
-    signOut(auth);
-  };
+const Navbar = () => {
+  const menuItems = (
+    <Nav>
+      <li>
+        <Nav.Link href="/">Home</Nav.Link>
+      </li>
+      <li>
+        <Nav.Link href="/Home#banner"> Banner</Nav.Link>
+      </li>
+      <li>
+        <Nav.Link href="/Home#tools">Tools</Nav.Link>
+      </li>
+      <li>
+        <Nav.Link href="/Home#business_summary">Business Summary</Nav.Link>
+      </li>
+      <li>
+        <Nav.Link href="/reviews">Reviews</Nav.Link>
+      </li>
+      <li>
+        <Nav.Link to="/about">About</Nav.Link>
+      </li>
+      <li>
+        <Nav.Link to="/login">Login</Nav.Link>
+      </li>
+    </Nav>
+  );
   return (
-    <Navbar
-      collapseOnSelect
-      expand="lg"
-      sticky="top"
-      bg="primary"
-      variant="dark"
-    >
-      <Container>
-        <Navbar.Brand as={Link} to="/">
-          Electronics Inventory
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/home#item">Items</Nav.Link>
-            <Nav.Link href="/home#banner">Banner</Nav.Link>
-            <Nav.Link href="/home#photos">Photos</Nav.Link>
-            <Nav.Link as={Link} to="blogs">
-              Blogs
-            </Nav.Link>
-          </Nav>
-          <Nav>
-            <Nav.Link as={Link} to="about">
-              About
-            </Nav.Link>
-            {user && (
-              <>
-                <Nav.Link as={Link} to="additem">
-                  Add Item
-                </Nav.Link>
-                <Nav.Link as={Link} to="manageinventories">
-                  Manage Inventories
-                </Nav.Link>
-                <Nav.Link as={Link} to="myitem">
-                  My Item
-                </Nav.Link>
-              </>
-            )}
-            {user ? (
-              <button
-                className="btn btn-link text-white text-decoration-none"
-                onClick={handleSignOut}
-              >
-                Logout
-              </button>
-            ) : (
-              <Nav.Link as={Link} to="login">
-                Login
-              </Nav.Link>
-            )}
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </label>
+          <ul
+            tabindex="0"
+            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            {menuItems}
+          </ul>
+        </div>
+        <a class="btn btn-ghost normal-case text-xl">Tools Manufacturer</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal p-0">{menuItems}</ul>
+      </div>
+    </div>
   );
 };
 
-export default Header;
+export default Navbar;
