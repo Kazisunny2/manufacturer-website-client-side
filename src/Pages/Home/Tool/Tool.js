@@ -6,7 +6,7 @@ const Tool = ({ tool }) => {
       <figure class="px-10 pt-10">
         <img
           src={tool.img}
-          alt="Shoes"
+          alt=""
           style={{ height: "20rem" }}
           class="rounded-xl"
         />

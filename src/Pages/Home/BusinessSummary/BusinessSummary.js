@@ -1,15 +1,17 @@
 import React from "react";
 
-const BusinessSummary = () => {
+const BusinessSummary = ({ businessSummary }) => {
   return (
-    <div className="text-center m-20 uppercase">
-      <h3 className="text-primary text-2xl font-bold  m-10">
-        Business Summary
-      </h3>
-      <h2 className="text-accent text-4xl font-bold">
-        Millions Bussiness Trust Us
-      </h2>
-      <h2 className="text-xl">Try to Understand Users Expectations</h2>
+    <div className="card card-compact w-96 bg-base-100 shadow-xl">
+      <figure>
+        <img src={businessSummary.img} alt="" style={{ height: "5rem" }} />
+      </figure>
+      <div className="card-body text-center">
+        <h2 className="text-center text-4xl text-bold">
+          {businessSummary.count}+
+        </h2>
+        <p className="text-xl text-accent">{businessSummary.name}</p>
+      </div>
     </div>
   );
 };
