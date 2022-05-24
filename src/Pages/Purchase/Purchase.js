@@ -3,7 +3,13 @@ import React from "react";
 const Purchase = () => {
   return (
     <div>
-      <h2>This is purchase </h2>
+      <form>
+        <input
+          type="text"
+          placeholder="Type here"
+          class="input input-bordered w-full max-w-xs"
+        />
+      </form>
     </div>
   );
 };

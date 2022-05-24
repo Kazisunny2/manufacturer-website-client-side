@@ -1,0 +1,62 @@
+[
+    {
+      "_id": 1,
+      "name": "Chisel",
+      "img": "https://m.media-amazon.com/images/I/616lSRtmi8L.jpg",
+      "description":
+        "a long-bladed hand tool with a beveled cutting edge and a plain handle that is struck with a hammer or mallet, used to cut or shape wood, stone, metal, or other hard materials",
+      "minimum_order_quantity": "10",
+      "available_quantity": "1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+      "Price": "30"
+    },
+    {
+      "_id": 2,
+      "name": "Drill Machine",
+      "img": "https://m.media-amazon.com/images/I/91Uhy2HnBUL._SL1500_.jpg",
+      "description":
+        "Drilling is a technology used a long time back in our past. It basically means to create a hole by making use of a tool.",
+      "minimum_order_quantity": "15",
+      "available_quantity": "1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+      "Price": "20"
+    },
+    {
+      "_id": 3,
+      "name": "Hammer",
+      "img": "https://m.media-amazon.com/images/I/71tTWyypTKL._AC_SL1500_.jpg",
+      "description":
+        "a tool with a heavy metal head mounted at right angles at the end of a handle, used for jobs such as breaking things and driving in nails. a metal ball, typically weighing 16 pounds (7.3 kg), attached to a wire for throwing in an athletic contest.",
+      "minimum_order_quantity": "20",
+      "available_quantity": "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+      "Price": "23"
+    },
+    {
+     " _id": 4,
+      "name": "Measuring Tape",
+      "img": "https://uniortools.com/res/katimages/710r%23612794%23image_1024.jpg",
+      "description":
+        "Use the big, numbered markings for inches. On a tape measure labeled with imperial units, the most prominent marks are usually the one-inch marks. These are typically marked by long, thin lines and fairly large numbers.",
+      "minimum_order_quantity": "20",
+      "available_quantity": "1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+      "Price": "15"
+    },
+    {
+      "_id": 5,
+      "name": "Pliers",
+      "img": "https://res.cloudinary.com/rsc/image/upload/w_1024/C0487230-01",
+      "description":
+        "a deadly weapon can be identified as any firearm, knife, bludgeon, or other device, instrument, material, or substance, whether animate or inanimate, which, in the manner it is used or is intended to be used, is capable of producing death or serious bodily injury.",
+      "minimum_order_quantity": "10",
+     "available_quantity": "111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+      "Price": "30"
+    },
+    {
+     " _id": 6,
+      "name": "Wrench",
+      "img": "https://n3.sdlcdn.com/imgs/j/v/y/4a4d6b8a_7f34_4772_8da0_a8141fbc0086-5bdb9.jpg",
+      "description":
+        "A wrench or spanner is a tool used to provide grip and mechanical advantage in applying torque to turn objects—usually rotary fasteners, such as nuts and bolts—or keep them from turning.",
+      "minimum_order_quantity": "10",
+      "available_quantity": "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+      "Price": "12"
+    }
+  ]
