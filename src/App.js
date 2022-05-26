@@ -10,6 +10,13 @@ import Purchase from "./Pages/Home/Purchase/Purchase";
 import RequireAuth from "./Pages/Login/RequireAuth/RequireAuth";
 import Portfolio from "./Pages/Portfolio/Portfolio";
 import NotFound from "./Pages/Shared/NotFound/NotFound";
+import { ToastContainer } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
+import Dashboard from "./Pages/Dashboard/Dashboard";
+import MyOrders from "./Pages/Dashboard/MyOrders";
+import MyReview from "./Pages/Dashboard/MyReview";
+import MyProfile from "./Pages/MyProfile/MyProfile";
 
 function App() {
   return (
@@ -29,10 +36,23 @@ function App() {
             </RequireAuth>
           }
         ></Route>
+        <Route
+          path="/dashboard"
+          element={
+            <RequireAuth>
+              <Dashboard></Dashboard>
+            </RequireAuth>
+          }
+        >
+          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route path="review" element={<MyReview></MyReview>}></Route>
+          <Route path="profile" element={<MyProfile></MyProfile>}></Route>
+        </Route>
         <Route path="/Login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
+      <ToastContainer />
     </div>
   );
 }

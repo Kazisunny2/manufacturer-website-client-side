@@ -29,8 +29,8 @@ const Tool = ({ tool }) => {
       <div className="card-body text-center">
         <h2 className="card-title">{name}</h2>
         <p className="card-text">Description: {description}</p>
-        <p> Minimum Order Quantity: {minimum_order_quantity}</p>
-        <p>Available Quantity: {available_quantity.length}</p>
+        <p> Minimum Order Quantity: {minimum_order_quantity} pieces</p>
+        <p>Available Quantity: {available_quantity} pieces</p>
         <p>Price(Per Unit): ${Price}</p>
         <div className="card-actions">
           <Link to={`/purchase/${tool._id}`}>

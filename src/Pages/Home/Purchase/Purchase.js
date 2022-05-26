@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useParams } from "react-router-dom";
 import auth from "../../../firebase.init";
+import { toast } from "react-toastify";
 
 const Purchase = () => {
   const { id } = useParams();
@@ -10,8 +11,32 @@ const Purchase = () => {
 
   const handleOrder = (event) => {
     event.preventDefault();
-    const minimum_order_quantity = event.target.minimum_order_quantity.value;
-    console.log();
+
+    const order = {
+      purchaseId: tool._id,
+      minimumOrder: tool.minimum_order_quantity,
+      purchase: tool.name,
+      customerEmail: user.email,
+      customerName: user.displayName,
+      phone: event.target.phone.value,
+      address: event.target.address.value,
+    };
+
+    fetch("http://localhost:5000/order", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(order),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data) {
+          toast(`Your Order Successfully Placed`);
+        } else {
+        }
+      });
   };
 
   useEffect(() => {
@@ -33,7 +58,8 @@ const Purchase = () => {
         <div className="card-body text-center">
           <h2 className="card-title">{tool.name}</h2>
           <p className="card-text">Description: {tool.description}</p>
-          <p> Minimum Order Quantity: {tool.minimum_order_quantity}</p>
+          <p> Minimum Order Quantity: {tool.minimum_order_quantity} pieces</p>
+          <p>Available Quantity: {tool.available_quantity} pieces</p>
           <p>Price(Per Unit): ${tool.Price}</p>
         </div>
       </div>
@@ -42,6 +68,12 @@ const Purchase = () => {
           onSubmit={handleOrder}
           className="grid grid-cols-1 gap-3 justify-items-center mt-2"
         >
+          <input
+            className="input input-bordered w-full max-w-xs"
+            name="Minimum_Order_Quantity"
+            type="number"
+            placeholder="Minimum Order Quantity"
+          />
           <input
             type="text"
             name="name"
@@ -57,7 +89,7 @@ const Purchase = () => {
             className="input input-bordered w-full max-w-xs"
           />
           <input
-            type="text"
+            type="number"
             name="phone"
             placeholder="Phone Number"
             className="input input-bordered w-full max-w-xs"
@@ -70,7 +102,7 @@ const Purchase = () => {
           />
           <input
             type="submit"
-            value="Submit"
+            value="Order Place"
             className="btn btn-secondary w-full max-w-xs"
           />
         </form>
