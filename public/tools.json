@@ -1,6 +1,5 @@
 [
     {
-      "_id": 1,
       "name": "Chisel",
       "img": "https://m.media-amazon.com/images/I/616lSRtmi8L.jpg",
       "description":
@@ -10,7 +9,6 @@
       "Price": "30"
     },
     {
-      "_id": 2,
       "name": "Drill Machine",
       "img": "https://m.media-amazon.com/images/I/91Uhy2HnBUL._SL1500_.jpg",
       "description":
@@ -20,7 +18,6 @@
       "Price": "20"
     },
     {
-      "_id": 3,
       "name": "Hammer",
       "img": "https://m.media-amazon.com/images/I/71tTWyypTKL._AC_SL1500_.jpg",
       "description":
@@ -30,7 +27,7 @@
       "Price": "23"
     },
     {
-     " _id": 4,
+
       "name": "Measuring Tape",
       "img": "https://uniortools.com/res/katimages/710r%23612794%23image_1024.jpg",
       "description":
@@ -40,7 +37,6 @@
       "Price": "15"
     },
     {
-      "_id": 5,
       "name": "Pliers",
       "img": "https://res.cloudinary.com/rsc/image/upload/w_1024/C0487230-01",
       "description":
@@ -50,7 +46,7 @@
       "Price": "30"
     },
     {
-     " _id": 6,
+      "id":6,
       "name": "Wrench",
       "img": "https://n3.sdlcdn.com/imgs/j/v/y/4a4d6b8a_7f34_4772_8da0_a8141fbc0086-5bdb9.jpg",
       "description":

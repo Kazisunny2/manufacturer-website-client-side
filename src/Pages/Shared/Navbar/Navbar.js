@@ -1,7 +1,7 @@
 import { signOut } from "firebase/auth";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import auth from "../../../firebase.init";
 
 const Navbar = () => {
@@ -61,7 +61,9 @@ const Navbar = () => {
             {menuItems}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">Tools Manufacturer</a>
+        <Link to="/" className="btn btn-ghost normal-case text-xl">
+          Tools Manufacturer
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>

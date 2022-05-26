@@ -1,8 +1,9 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Tool = ({ tool }) => {
   const {
+    _id,
     img,
     name,
     description,
@@ -10,6 +11,11 @@ const Tool = ({ tool }) => {
     available_quantity,
     Price,
   } = tool;
+  const navigate = useNavigate();
+
+  const navigateToToolDetail = (id) => {
+    navigate(`/tool/${id}`);
+  };
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure className="px-10 pt-10">
@@ -27,9 +33,14 @@ const Tool = ({ tool }) => {
         <p>Available Quantity: {available_quantity.length}</p>
         <p>Price(Per Unit): ${Price}</p>
         <div className="card-actions">
-          <button className="btn btn-primary">
-            <NavLink to="/purchase">Purchase</NavLink>
-          </button>
+          <Link to={`/purchase/${tool._id}`}>
+            <button
+              onClick={() => navigateToToolDetail(_id)}
+              className="btn btn-primary "
+            >
+              Purchase
+            </button>
+          </Link>
         </div>
       </div>
     </div>

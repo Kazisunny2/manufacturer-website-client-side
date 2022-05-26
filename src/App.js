@@ -6,7 +6,7 @@ import Blog from "./Pages/Blog/Blog";
 import About from "./Pages/About/About";
 import Login from "./Pages/Login/Login/Login";
 import SignUp from "./Pages/Login/SignUp/SignUp";
-import Purchase from "./Pages/Purchase/Purchase";
+import Purchase from "./Pages/Home/Purchase/Purchase";
 import RequireAuth from "./Pages/Login/RequireAuth/RequireAuth";
 import Portfolio from "./Pages/Portfolio/Portfolio";
 import NotFound from "./Pages/Shared/NotFound/NotFound";
@@ -22,7 +22,7 @@ function App() {
         <Route path="/Blog" element={<Blog></Blog>}></Route>
         <Route path="/Portfolio" element={<Portfolio></Portfolio>}></Route>
         <Route
-          path="/Purchase"
+          path="/Purchase/:id"
           element={
             <RequireAuth>
               <Purchase></Purchase>
