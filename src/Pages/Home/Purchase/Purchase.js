@@ -17,6 +17,7 @@ const Purchase = () => {
       minimumOrder: tool.minimum_order_quantity,
       purchase: tool.name,
       customerEmail: user.email,
+      Price: tool.Price,
       customerName: user.displayName,
       phone: event.target.phone.value,
       address: event.target.address.value,
@@ -86,6 +87,13 @@ const Purchase = () => {
             name="email"
             disabled
             value={user?.email || ""}
+            className="input input-bordered w-full "
+          />
+          <input
+            type="number"
+            name="Price"
+            disabled
+            value={tool?.Price || ""}
             className="input input-bordered w-full "
           />
           <input
