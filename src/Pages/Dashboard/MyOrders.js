@@ -11,7 +11,7 @@ const MyOrders = ({ refetch }) => {
   const navigate = useNavigate();
 
   const handleDelete = (email) => {
-    fetch(`http://localhost:5000/order?=${email}`, {
+    fetch(`https://polar-forest-02530.herokuapp.com/order?=${email}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -26,7 +26,7 @@ const MyOrders = ({ refetch }) => {
 
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/order?=${user.email}`, {
+      fetch(`https://polar-forest-02530.herokuapp.com/order?=${user.email}`, {
         method: "GET",
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,

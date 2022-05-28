@@ -7,7 +7,7 @@ const AddProduct = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    const url = `http://localhost:5000/tool`;
+    const url = `https://polar-forest-02530.herokuapp.com/tool`;
     fetch(url, {
       method: "POST",
       headers: {

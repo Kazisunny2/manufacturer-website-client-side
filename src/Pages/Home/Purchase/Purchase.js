@@ -23,7 +23,7 @@ const Purchase = () => {
       address: event.target.address.value,
     };
 
-    fetch("http://localhost:5000/order", {
+    fetch("https://polar-forest-02530.herokuapp.com/order", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -41,7 +41,7 @@ const Purchase = () => {
   };
 
   useEffect(() => {
-    const url = `http://localhost:5000/tool/${id}`;
+    const url = `https://polar-forest-02530.herokuapp.com/tool/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setTool(data));
