@@ -22,7 +22,7 @@ const Navbar = () => {
         <NavLink to="/Portfolio"> Portfolio</NavLink>
       </li>
       <li>
-        <NavLink to="/About">About</NavLink>
+        <NavLink to="/contact">Contact Us</NavLink>
       </li>
       {user && (
         <li>
