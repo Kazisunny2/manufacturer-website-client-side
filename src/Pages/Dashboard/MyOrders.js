@@ -3,11 +3,26 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import { signOut } from "firebase/auth";
+import { toast } from "react-toastify";
 
-const MyOrders = () => {
+const MyOrders = ({ refetch }) => {
   const [orders, setOrders] = useState([]);
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
+
+  const handleDelete = (email) => {
+    fetch(`http://localhost:5000/order?=${email}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.deletedCount) {
+          toast.success(`Order:${user.CustomerEmail}is Deleted.`);
+          refetch();
+        }
+      });
+  };
 
   useEffect(() => {
     if (user) {
@@ -65,7 +80,12 @@ const MyOrders = () => {
                   )}
                 </td>
                 <td>
-                  <button className="btn btn-error ">Delete</button>
+                  <button
+                    onClick={() => handleDelete(user.email)}
+                    className="btn btn-error "
+                  >
+                    Cancel
+                  </button>
                 </td>
               </tr>
             ))}

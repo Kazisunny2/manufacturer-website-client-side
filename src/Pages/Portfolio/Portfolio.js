@@ -23,8 +23,8 @@ const Portfolio = () => {
         <span className="text-bold text-2xl text-pink-800">
           Technological Skills:
         </span>
-        Technological Skills: HTML, CSS, Bootstrap, Tailwind JavaScript, React,
-        Nodejs, Express, Mongodb
+        HTML, CSS, Bootstrap, Tailwind JavaScript, React, Nodejs, Express,
+        Mongodb
       </h2>
       <h2 className="text-bold text-2xl text-pink-800">3 Website Link</h2>
       <p>1. https://kazi-sunny.netlify.app/</p>
